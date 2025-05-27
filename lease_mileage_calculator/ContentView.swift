@@ -28,11 +28,16 @@ struct ContentView: View {
             .onChange(of: purchaseDate) {
                 purchaseDateStorage = purchaseDate
             }
+            .onTapGesture {
+                showKeyboard = false
+            }
             
             HStack {
                 Text("# of miles per year")
                 Spacer()
-                TextField("", text: $milesPerYear)
+                TextField("", text: $milesPerYear) {
+                    showKeyboard = false
+                }
                     .keyboardType(.numberPad)
                     .onAppear() {
                         milesPerYear = milesPerYearStorage
@@ -70,11 +75,17 @@ struct ContentView: View {
     }
     
     /**
-     Get number of miles the user should be at or under on their car lease.
+     Get the approximate number of miles the user's lease allows for as of
+     the current date.
+
+     Returns: number of miles rounded down to the closest integer.
      */
     func getSuggestedMiles() -> Int {
-        let numDaysSincePurchase = Calendar(identifier: .gregorian).numberOfDaysSince(purchaseDate)
-        return (Int(milesPerYear) ?? 0) * numDaysSincePurchase / 365
+        let calendar: Calendar = Calendar(identifier: .gregorian)
+        let daysSincePurchase: Int = calendar.numberOfDaysSince(self
+        .purchaseDate)
+        let numMiles: Int = Int(milesPerYear) ?? 0
+        return numMiles * daysSincePurchase / 365
     }
 }
 
