@@ -67,6 +67,7 @@ struct ContentView: View {
                 showKeyboard = false
             }
             .sensoryFeedback(.selection, trigger: showKeyboard)
+            .sensoryFeedback(.selection, trigger: purchaseDate)
             
             Spacer()
                 
