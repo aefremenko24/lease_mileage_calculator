@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
     @State var purchaseDate: Date = Date()
     @State var milesPerYear: String = ""
-    
-    @AppStorage("purchase_date") var purchaseDateStorage: Date = Date()
-    @AppStorage("miles_per_year") var milesPerYearStorage: String = ""
     
     @FocusState private var showKeyboard: Bool
     
@@ -23,10 +21,11 @@ struct ContentView: View {
                        in: ...Date(),
                        displayedComponents: [.date])
             .onAppear() {
-                purchaseDate = purchaseDateStorage
+                purchaseDate = stringToDate(SharedData.purchaseDate) ?? Date()
             }
             .onChange(of: purchaseDate) {
-                purchaseDateStorage = purchaseDate
+                SharedData.purchaseDate = dateToString(purchaseDate)
+                WidgetCenter.shared.reloadAllTimelines()
             }
             .onTapGesture {
                 showKeyboard = false
@@ -40,11 +39,12 @@ struct ContentView: View {
                 }
                     .keyboardType(.numberPad)
                     .onAppear() {
-                        milesPerYear = milesPerYearStorage
+                        milesPerYear = SharedData.milesPerYear
                     }
                     .onChange(of: milesPerYear) {
                         milesPerYear = milesPerYear.filter { "0123456789".contains($0) }
-                        milesPerYearStorage = milesPerYear
+                        SharedData.milesPerYear = milesPerYear
+                        WidgetCenter.shared.reloadAllTimelines()
                     }
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 120)

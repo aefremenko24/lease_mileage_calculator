@@ -20,3 +20,15 @@ extension Calendar {
         return numberOfDays.day ?? 0
     }
 }
+
+func stringToDate(_ input: String) -> Date? {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.date(from: input)
+}
+
+func dateToString(_ input: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    return dateFormatter.string(from: input)
+}

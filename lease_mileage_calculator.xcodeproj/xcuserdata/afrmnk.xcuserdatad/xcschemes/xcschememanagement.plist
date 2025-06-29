@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MileageCalculatorWidgetsExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>lease_mileage_calculator.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2618E9D92E11BC8B00060C23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26DF367E2DCEBDF00034AFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26DF368B2DCEBDF20034AFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>26DF36952DCEBDF20034AFB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

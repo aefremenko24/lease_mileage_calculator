@@ -6,7 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2618E9DD2E11BC8C00060C23 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2618E9DC2E11BC8B00060C23 /* WidgetKit.framework */; };
+		2618E9DF2E11BC8C00060C23 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2618E9DE2E11BC8C00060C23 /* SwiftUI.framework */; };
+		2618E9EC2E11BC8D00060C23 /* MileageCalculatorWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2618E9DA2E11BC8B00060C23 /* MileageCalculatorWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		2618E9EA2E11BC8D00060C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26DF36772DCEBDF00034AFB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2618E9D92E11BC8B00060C23;
+			remoteInfo = MileageCalculatorWidgetsExtension;
+		};
 		26DF368D2DCEBDF20034AFB8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 26DF36772DCEBDF00034AFB8 /* Project object */;
@@ -23,15 +36,62 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2618E9ED2E11BC8D00060C23 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2618E9EC2E11BC8D00060C23 /* MileageCalculatorWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2618E9DA2E11BC8B00060C23 /* MileageCalculatorWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MileageCalculatorWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2618E9DC2E11BC8B00060C23 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2618E9DE2E11BC8C00060C23 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		2618E9F52E11C3A300060C23 /* MileageCalculatorWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MileageCalculatorWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		26DF367F2DCEBDF00034AFB8 /* lease_mileage_calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lease_mileage_calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DF368C2DCEBDF20034AFB8 /* lease_mileage_calculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lease_mileage_calculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26DF36962DCEBDF20034AFB8 /* lease_mileage_calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lease_mileage_calculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2618E9F02E11BC8D00060C23 /* Exceptions for "MileageCalculatorWidgets" folder in "MileageCalculatorWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2618E9D92E11BC8B00060C23 /* MileageCalculatorWidgetsExtension */;
+		};
+		2618E9FB2E11C3E700060C23 /* Exceptions for "lease_mileage_calculator" folder in "MileageCalculatorWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Extensions.swift,
+				SharedData.swift,
+			);
+			target = 2618E9D92E11BC8B00060C23 /* MileageCalculatorWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		2618E9E02E11BC8C00060C23 /* MileageCalculatorWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2618E9F02E11BC8D00060C23 /* Exceptions for "MileageCalculatorWidgets" folder in "MileageCalculatorWidgetsExtension" target */,
+			);
+			path = MileageCalculatorWidgets;
+			sourceTree = "<group>";
+		};
 		26DF36812DCEBDF00034AFB8 /* lease_mileage_calculator */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2618E9FB2E11C3E700060C23 /* Exceptions for "lease_mileage_calculator" folder in "MileageCalculatorWidgetsExtension" target */,
+			);
 			path = lease_mileage_calculator;
 			sourceTree = "<group>";
 		};
@@ -48,6 +108,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2618E9D72E11BC8B00060C23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2618E9DF2E11BC8C00060C23 /* SwiftUI.framework in Frameworks */,
+				2618E9DD2E11BC8C00060C23 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26DF367C2DCEBDF00034AFB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +141,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2618E9DB2E11BC8B00060C23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2618E9DC2E11BC8B00060C23 /* WidgetKit.framework */,
+				2618E9DE2E11BC8C00060C23 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		26DF36762DCEBDF00034AFB8 = {
 			isa = PBXGroup;
 			children = (
+				2618E9F52E11C3A300060C23 /* MileageCalculatorWidgetsExtension.entitlements */,
 				26DF36812DCEBDF00034AFB8 /* lease_mileage_calculator */,
 				26DF368F2DCEBDF20034AFB8 /* lease_mileage_calculatorTests */,
 				26DF36992DCEBDF20034AFB8 /* lease_mileage_calculatorUITests */,
+				2618E9E02E11BC8C00060C23 /* MileageCalculatorWidgets */,
+				2618E9DB2E11BC8B00060C23 /* Frameworks */,
 				26DF36802DCEBDF00034AFB8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +169,7 @@
 				26DF367F2DCEBDF00034AFB8 /* lease_mileage_calculator.app */,
 				26DF368C2DCEBDF20034AFB8 /* lease_mileage_calculatorTests.xctest */,
 				26DF36962DCEBDF20034AFB8 /* lease_mileage_calculatorUITests.xctest */,
+				2618E9DA2E11BC8B00060C23 /* MileageCalculatorWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +177,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2618E9D92E11BC8B00060C23 /* MileageCalculatorWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2618E9F12E11BC8D00060C23 /* Build configuration list for PBXNativeTarget "MileageCalculatorWidgetsExtension" */;
+			buildPhases = (
+				2618E9D62E11BC8B00060C23 /* Sources */,
+				2618E9D72E11BC8B00060C23 /* Frameworks */,
+				2618E9D82E11BC8B00060C23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2618E9E02E11BC8C00060C23 /* MileageCalculatorWidgets */,
+			);
+			name = MileageCalculatorWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = MileageCalculatorWidgetsExtension;
+			productReference = 2618E9DA2E11BC8B00060C23 /* MileageCalculatorWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		26DF367E2DCEBDF00034AFB8 /* lease_mileage_calculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26DF36A02DCEBDF20034AFB8 /* Build configuration list for PBXNativeTarget "lease_mileage_calculator" */;
@@ -102,10 +206,12 @@
 				26DF367B2DCEBDF00034AFB8 /* Sources */,
 				26DF367C2DCEBDF00034AFB8 /* Frameworks */,
 				26DF367D2DCEBDF00034AFB8 /* Resources */,
+				2618E9ED2E11BC8D00060C23 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2618E9EB2E11BC8D00060C23 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				26DF36812DCEBDF00034AFB8 /* lease_mileage_calculator */,
@@ -170,9 +276,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					2618E9D92E11BC8B00060C23 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					26DF367E2DCEBDF00034AFB8 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -203,11 +312,19 @@
 				26DF367E2DCEBDF00034AFB8 /* lease_mileage_calculator */,
 				26DF368B2DCEBDF20034AFB8 /* lease_mileage_calculatorTests */,
 				26DF36952DCEBDF20034AFB8 /* lease_mileage_calculatorUITests */,
+				2618E9D92E11BC8B00060C23 /* MileageCalculatorWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2618E9D82E11BC8B00060C23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26DF367D2DCEBDF00034AFB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +349,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2618E9D62E11BC8B00060C23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		26DF367B2DCEBDF00034AFB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +380,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2618E9EB2E11BC8D00060C23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2618E9D92E11BC8B00060C23 /* MileageCalculatorWidgetsExtension */;
+			targetProxy = 2618E9EA2E11BC8D00060C23 /* PBXContainerItemProxy */;
+		};
 		26DF368E2DCEBDF20034AFB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 26DF367E2DCEBDF00034AFB8 /* lease_mileage_calculator */;
@@ -269,6 +398,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2618E9EE2E11BC8D00060C23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MileageCalculatorWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2R48S3Q5D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MileageCalculatorWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MileageCalculatorWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aefremenko.lease-mileage-calculator.MileageCalculatorWidgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2618E9EF2E11BC8D00060C23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MileageCalculatorWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2R48S3Q5D4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MileageCalculatorWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MileageCalculatorWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aefremenko.lease-mileage-calculator.MileageCalculatorWidgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		26DF369E2DCEBDF20034AFB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,8 +583,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = lease_mileage_calculator/lease_mileage_calculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2R48S3Q5D4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -428,8 +616,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = lease_mileage_calculator/lease_mileage_calculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2R48S3Q5D4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -529,6 +718,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2618E9F12E11BC8D00060C23 /* Build configuration list for PBXNativeTarget "MileageCalculatorWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2618E9EE2E11BC8D00060C23 /* Debug */,
+				2618E9EF2E11BC8D00060C23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		26DF367A2DCEBDF00034AFB8 /* Build configuration list for PBXProject "lease_mileage_calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
